@@ -9,3 +9,18 @@ Given an array of integers called "nums" and an integer "target", return the ind
 
 nums = [2, 9, 7, 4, 3]
 target =  12
+
+
+def twoSums(nums, target):
+    twoSumsList = []
+    for i in range(len(nums)):
+        for k in range(len(nums)):
+            if i == k:
+                continue
+            if (nums[i]+ nums[k]) == target:
+                twoSumsList.append(i)
+                twoSumsList.append(k)
+                return twoSumsList
+
+    
+print(twoSums([2, 9, 7, 4, 3], 12))
