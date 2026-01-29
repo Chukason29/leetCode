@@ -23,4 +23,12 @@ def twoSums(nums, target):
                 return twoSumsList
 
     
-print(twoSums([2, 9, 7, 4, 3], 12))
+#More Proffesional Solution
+
+def myTwoSums(nums, target):
+    for i in range(len(nums)):
+        for k in range(i + 1, len(nums)):
+            if (nums[i] + nums[k]) == 12:
+                return [i, k]
+
+print (myTwoSums(nums, target))
